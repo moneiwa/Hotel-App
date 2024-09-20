@@ -1,95 +1,73 @@
 import React, { useState, useEffect } from 'react';
-import { addAvailableItem, fetch } from "./db";
-import './index.css'
+import { addAvailableItem, fetchRooms } from "./db"; // importing your functions
+import './index.css';
 
 function Bookings() {
-    const [availableItem, setAvailableItem] = useState();
-    const [list, setList] = useState([]);
+    const [roomName, setRoomName] = useState('');
+    const [guests, setGuests] = useState('');
+    const [price, setPrice] = useState('');
+    const [rooms, setRooms] = useState([]);
 
-    // Uncomment and use this useEffect to fetch data if needed
+    // Fetch rooms on component mount
     useEffect(() => {
-        const getdata = async () => {
-            const data = await fetch();   
-            setList(data);
-            console.log(data);    
+        const getData = async () => {
+            const data = await fetchRooms();
+            setRooms(data);
         };
-        getdata();
+        getData();
     }, []);
 
+    // Function to handle adding room
     const handleAddAvailableItem = () => {
-        addAvailableItem(availableItem).then(() => {
-            alert("Successfully added");
-        }).catch((error) => {
-            console.error("Error adding item: ", error);
-            alert("Error adding item");
-        });
+        const roomDetails = {
+            roomName,
+            guests,
+            price
+        };
+
+        addAvailableItem(roomDetails)
+            .then(() => {
+                alert("Successfully added room");
+            })
+            .catch((error) => {
+                console.error("Error adding room: ", error);
+                alert("Error adding room");
+            });
     };
-
-
-
-
-
-
-    // const Book(){
-
-    //   useEffect(() => {
-    //     const getdata = async () => {
-    //         const data = await fetch();   
-    //         setList(data);
-    //         console.log(data);    
-    //     };
-    //     getdata();
-    // }, []);
-
-
-    // }
-
-
-
-    
 
     return (
         <div className='roomsl'>
             <ul>
                 <li>
-                  
                     <input
                         type="text"
-                        placeholder="availableRooms"
-                        onChange={(e) => setAvailableItem(e.target.value)}
+                        placeholder="Room Name"
+                        onChange={(e) => setRoomName(e.target.value)}
                     />
-
-<input
+                    <input
                         type="text"
-                        placeholder="number of guests"
-                        onChange={(e) => setAvailableItem(e.target.value)}
+                        placeholder="Number of Guests"
+                        onChange={(e) => setGuests(e.target.value)}
                     />
-
-<input
+                    <input
                         type="number"
-                        placeholder="Prices"
-                        onChange={(e) => setAvailableItem(e.target.value)}
+                        placeholder="Price"
+                        onChange={(e) => setPrice(e.target.value)}
                     />
-
-
-
-
-                    <button onClick={handleAddAvailableItem}>Add</button>
+                    <button onClick={handleAddAvailableItem}>Add Room</button>
                 </li>
             </ul>
 
-            
-{
-
-console.log(list)
-
-}
-{/* <form>
-      {list.map((item, index)=>(
-          <li key={index} >{item.availableItem}</li>
-      ))}
-
-</form> */}
+            <div>
+                <h2>Available Rooms:</h2>
+                <ul>
+                    {rooms.map((room, index) => (
+                        <li key={index}>
+                            Room: {room.roomName}, Guests: {room.guests}, Price: ${room.price}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }
