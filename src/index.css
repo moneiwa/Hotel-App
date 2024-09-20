@@ -11,6 +11,17 @@
 }
 
 
+.conta{
+  display:flex ;
+  gap:30%;
+}
+
+.date{
+  width: 900px;
+}
+
+
+
 .image{
   background-image:url('./assets/pexels-pixabay-258154.jpg');
   background-size:cover;
@@ -31,16 +42,29 @@ border-color: black;
 }
 
 
-.container-row{
-  display: flex;
+.container-row {
+  margin: 10px;
+  display: flex; 
+  width: 100%;
+  overflow: hidden;
   gap: 10px;
+  
+ 
+
+  /* overflow-y: scroll; */
+  /* overflow-x: scroll;  */
+  
+  /* white-space: nowrap; */
+  /* max-width: 100%;  */
+  /* scrollbar-width: thin; 
+  scrollbar-color: #b8b8b8 #f5f5f5; */
 }
 
 .one{
   background-image:url('./assets/pexels-donaldtong94-189296.jpg');
   background-size:cover;
   height: 400px;
-  width: 34%;
+  width: 600px;
   margin-top: 2%;
 }
 
@@ -48,7 +72,7 @@ border-color: black;
   background-image:url('./assets/two.jpg');
   background-size:cover;
   height: 400px;
-  width: 34%;
+  width: 600px;
   margin-top: 2%;
 
 }
@@ -57,11 +81,11 @@ border-color: black;
   background-image:url('./assets/three.jpg');
   background-size:cover;
   height: 400px;
-  width: 34%;
+  width: 600px;
   margin-top: 2%;
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: 0;
-  float: right;
+
 }
 
 .navbar {
@@ -80,13 +104,9 @@ border-color: black;
   
 }
 .navbar a{
-  color: white;
+  color: rgb(31, 23, 23);
 }
 
-.cont{
-  display: flex;
-  gap: 30%;
-}
 
 
 .map_container{
@@ -117,57 +137,366 @@ p2{
   color: rgb(17, 76, 204);
 }
 
-button{
+buttn{
   background-color:rgba(15, 81, 223, 0.212);
   padding: 18px;
   border-radius: 20px;
 }
 
-.co{
-  background-color: rgba(0, 0, 0, 0.527);
-  height: 50px;
-}
 
 
 /* About */
+h1{
+  margin-left: 45%;
+
+  font-weight: 500px;
+}
+
+.dinetwo h1{
+  margin-left: 13%;
+}
+p4{
+
+  margin-left: 43%;
+}
+
+.box{
+  margin-top: 50px;
+  background-color:white;
+margin-left: 400px;
+width: 1200px;
+margin-right: 200px;
+height: 800px;
+
+
+}
+.head{
+margin-top: 120px;
+margin-left: 18%;
+display: flex;
+justify-content: center;
+
+}
 
 
 .co{
-  background-color: rgb(143, 115, 115);
-  width: 90%;
+  /* background-color: rgb(143, 115, 115);
+  width: 100%;
   height: 1000px;
   margin-top: 1%;
   margin-left: 5%;
-  margin-right: 5%;
+  margin-right: 5%; */
+  background-color: white;
+ 
 
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  /* grid-template-rows: 1fr 1fr; */
-  gap:0;
-}
 
-.on{
-
-/* background-size: cover; */
-  /* padding: 20px; */
+.cont{
+  display: flex;
+  flex-direction: row;
 }
 
 .on img
 {
-  width: 100%;
-  /* height: 100%;? */
+  margin-top: auto;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 2px;
+
 }
 
 .tw img
 {
-  width: 100%;
-  /* height: 100%; */
+  margin-top: auto;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 0%;
 }
 
 .thre img
 {
+ 
+  margin-top: 2%;
+  width: 600px;
+  height: 400px;
+
+  margin-bottom: 5%;
+}
+
+.four img{
+
+ 
+  margin-top: 2%;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 5%;
+}
+
+
+
+/* Bookings */
+
+.form{
+  background-color:aqua;
+  margin-top: 80px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+ 
+}
+.formm{
+  margin-top: 20px;
+
+}
+
+.button{
+  margin-top: 40px;
+  padding: 20px;
+  margin-left: 100px;
+}
+
+
+.bg-img{
+  background-image:url('./assets/pexels-pixabay-258154.jpg');
+  background-size:cover;
+}
+
+.wrapper{
+  margin-left: 700px;
+  margin-top: 100px;
+}
+
+.dine{
+  display: flex;
+  flex-direction: row;
+}
+
+.dinetwo{
+  width: 1000px;
+height: auto;
+margin-top:2%;
+background-color:white;
+margin-left: 40%;
+
+
+}
+
+
+.dineone img{
+ 
+  height: 800px;
+  width: 1500px;
+  margin-top: 2%;
+ 
+  margin-left: 200px;
+
+
+}
+
+.near{
+  display: flex;
+  flex-direction: row;
+  gap:150px;
+}
+
+.listone{
+  margin-top: 10%;
+ 
+  margin-top: 5%;
+  height: 20px;
+  float: left;
+  margin-left: 300px;
+  
+}
+.listtwo{
+  
+  margin-top: 5%;
+  height: 20px;
+}
+.listthree{
+ 
+  margin-top: 5%;
+  height: 20px;
+}
+
+.listfour{
+ 
+  margin-top: 5%;
+  height: 20px;
+  margin-right: 10;
+  margin-bottom: 50px;
+}
+
+
+
+.date {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #8d4d4d;
+  width: 200px;
+}
+
+.date .react-datepicker-wrapper {
   width: 100%;
-  height: 40%;
+}
+
+.date .react-datepicker {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.date .react-datepicker__input-container {
+  width: 100%;
+}
+
+.date .react-datepicker__input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.date .react-datepicker__input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date .react-datepicker__day-names {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.date .react-datepicker__day {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.date .react-datepicker__day:hover {
+  background-color: #f9f9f9;
+}
+
+.date .react-datepicker__day--selected {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.date .react-datepicker__day--in-range {
+  background-color: #f2f2f2;
+}
+
+.date .react-datepicker__day--in-range:hover {
+  background-color: #f9f9f9;
+}
+
+
+.horizontal-scroll-container {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  white-space: nowrap; /* Prevent line breaks in images */
+  padding: 10px 0; /* Optional: Add some padding */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.horizontal-scroll-wrapper {
+  display: inline-flex; /* Align images in a horizontal row */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.scroll-image {
+  height: 200px; /* Adjust as needed */
+  margin-right: 10px; /* Space between images */
+  object-fit: cover;
+  flex-shrink: 0; /* Prevent image shrinking */
+}
+
+/* Optional: Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.login {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #241f1f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-left: 700px;
+}
+
+.login input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.login input[type="password"] {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+
+.login input[type="email"] {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+
+.login button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.roomss{
+  padding: 20px;
+  margin-top: 80px;
+  margin-left: 500px;
+  background-image:url('./assets/pexels-pixabay-258154.jpg');
+  background-size:cover;
+}
+
+
+.room-name-input{
+margin-right: 10px;
+}
+
+.guests-input{
+  margin-right: 10px;
+}
+
+
+.add-room-button{
+  padding: 2px;
+  color: #241f1f;
+  
+
+}
+
+.price-input{
+  margin-right: 10px;
 }
