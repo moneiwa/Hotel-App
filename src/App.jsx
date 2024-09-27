@@ -1,41 +1,34 @@
-import React from 'react'
-import Navbar from './navbar';
-import Home from './Home';
-import About from './About';
-import Bookings from './Bookings';
-import './index.css'
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Contact from './contact';
-import currentDate from './currentDate';
+// App.js
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Navbar from './navbar'; 
+import store from './store'; 
 import Login from './Login';
-import Register from './Register';
+import Signup from './Signup'; 
+import Bookings from './Bookings';
+import Home from './Home';
+import Admin from './Admin';
+import About from './About'; // Import the About component
 
 
-
-function App() {
-
-  return (
-  
-      <div>
-
-         <Router>
-         <Navbar/>
-         <Routes>
-    
-    
-    
-        <Route path="/" element={<Home/> }/>
-      <Route path="About"element={<About/>}/>
-      <Route path="/Bookings"element={<Bookings/>}/>
-      <Route path="/Contact"element={<Contact/>}/>
-      <Route path="/Login"element={<Login/>}/>
-      <Route path="/Register"element={<Register/>}/>
-    </Routes>
-    
-    </Router>
-        </div>
-  
-  )
-}
+const App = () => {
+    return (
+        <Provider store={store}>
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/bookings" element={<Bookings />} />
+                    <Route path="/admin" element={<Admin />} />
+                    <Route path="/about" element={<About />} /> {/* Route for About component */}
+                    <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+            </Router>
+        </Provider>
+    );
+};
 
 export default App;

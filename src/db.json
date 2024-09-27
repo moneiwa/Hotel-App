@@ -1,0 +1,19 @@
+{
+    "rooms": [
+      {
+        "id": 1,
+        "name": "Deluxe Room",
+        "checkInDate": "Thu 2 Sept",
+        "checkOutDate": "Thu 3 ",
+        "details": "1 room, 2 Adults, 0 Children"
+      },
+      {
+        "id": 2,
+        "name": "Executive Suite",
+        "checkInDate": "Fri 10 Sept",
+        "checkOutDate": "Sun 12 Sept",
+        "details": "1 suite, 4 Adults, 1 Child"
+      }
+    ]
+  }
+  

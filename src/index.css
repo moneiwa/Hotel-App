@@ -1,10 +1,141 @@
 
 
+h1 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="button"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+.roomss {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.room-name-input, .guests-input, .price-input, .date-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-room-button {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-room-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+.error-message {
+  background-color: #ff9999;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.error-message button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+.b{
+  background-color: #241f1f;
+}
+.search-input{
+  margin-left: 250px;
+
+}
+
+.sear h2{
+margin-left: 650px;
+}
+
+
+.cart{
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+}
+.cart button{
+  margin-left: 100px;
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+  padding:10px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  margin-bottom: 20PX;
+}
+
+.sear button{
+  background-color: black;
+  color: white;
+  padding:10px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  
+}
+
 .container{
   background-color: white;
   width: 90%;
   height: 1000px;
-  margin-top: 1%;
+  margin-top: 4%;
   margin-left: 5%;
   margin-right: 5%;
 
@@ -89,22 +220,23 @@ border-color: black;
 }
 
 .navbar {
-
+width: 100%;
   position:absolute;
   top: 0;
   right: 0;
-  margin-top: 25px;
-  margin-right:10%;
-  color: black;
+  margin-top: 20px;
+ 
+  background-color: rgb(15, 13, 13);
   
 }
 .navbar ul{
+  margin-left: 900px;
   display: flex;
   gap: 10%;
   
 }
 .navbar a{
-  color: rgb(31, 23, 23);
+  color: rgb(248, 242, 242);
 }
 
 
@@ -146,24 +278,35 @@ buttn{
 
 
 /* About */
+.v {
+  width: 80%;
+  height: auto;
+  background-color: white;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack items vertically */
+  margin-left: 150px;
+  margin-right: 100px;
+  height: 100%;
+}
+
 h1{
   margin-left: 45%;
 
   font-weight: 500px;
 }
 
-.dinetwo h1{
-  margin-left: 13%;
-}
+
 p4{
 
   margin-left: 43%;
 }
 
 .box{
-  margin-top: 50px;
-  background-color:white;
-margin-left: 400px;
+margin-top: 0%;
+background-color:white;
+margin-left: 200px;
 width: 1200px;
 margin-right: 200px;
 height: 800px;
@@ -178,14 +321,18 @@ justify-content: center;
 
 }
 
-
+.coo{
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  margin-left: 42%;
+}
 .co{
-  /* background-color: rgb(143, 115, 115);
+  background-color: rgb(143, 115, 115);
   width: 100%;
-  height: 1000px;
-  margin-top: 1%;
-  margin-left: 5%;
-  margin-right: 5%; */
+  
+  margin-top: 100px;
+  margin-left: 12%;
+ margin-right: 25%;
   background-color: white;
  
 
@@ -194,6 +341,7 @@ justify-content: center;
 .cont{
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
 }
 
 .on img
@@ -272,12 +420,24 @@ justify-content: center;
   flex-direction: row;
 }
 
+
+
+
+.dinetwo h1{
+  margin-left: 40%;
+}
+
+.dinetwo p{
+
+  margin-left: 30%;
+}
+
 .dinetwo{
-  width: 1000px;
-height: auto;
-margin-top:2%;
+  width: 100%;
+margin-top: 70px;
+
 background-color:white;
-margin-left: 40%;
+
 
 
 }
@@ -286,10 +446,10 @@ margin-left: 40%;
 .dineone img{
  
   height: 800px;
-  width: 1500px;
+  width: 100%;
   margin-top: 2%;
  
-  margin-left: 200px;
+  
 
 
 }
@@ -297,34 +457,36 @@ margin-left: 40%;
 .near{
   display: flex;
   flex-direction: row;
-  gap:150px;
+  margin-left: 25%;
+  gap:10px;
+  width: 100%;
+ 
 }
 
 .listone{
-  margin-top: 10%;
+  
  
-  margin-top: 5%;
   height: 20px;
   float: left;
-  margin-left: 300px;
+
   
 }
 .listtwo{
   
-  margin-top: 5%;
+
   height: 20px;
 }
 .listthree{
  
-  margin-top: 5%;
+
   height: 20px;
 }
 
 .listfour{
  
-  margin-top: 5%;
+ 
   height: 20px;
-  margin-right: 10;
+ 
   margin-bottom: 50px;
 }
 
@@ -404,9 +566,9 @@ margin-left: 40%;
 
 .horizontal-scroll-container {
   width: 100%;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Disable vertical scrolling */
-  white-space: nowrap; /* Prevent line breaks in images */
+  overflow-x: auto; 
+  overflow-y: hidden; 
+  white-space: nowrap; 
   padding: 10px 0; /* Optional: Add some padding */
   box-sizing: border-box; /* Ensure padding is included in width */
 }
@@ -499,4 +661,67 @@ margin-right: 10px;
 
 .price-input{
   margin-right: 10px;
+}
+
+.room-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center align cards */
+  margin-top: 20px; /* Margin above the cards */
+}
+
+.room-card {
+  background: #ffffff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  overflow: hidden; /* Prevents overflow of content */
+  max-width: 300px; /* Max width for cards */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation for hover effect */
+}
+
+.room-card:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.room-image {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.room-details {
+  padding: 16px; 
+}
+
+.room-details h3 {
+  margin: 0 0 8px; 
+  font-size: 1.5rem; 
+  color: #333; 
+}
+
+.room-details p {
+  margin: 4px 0; 
+  font-size: 1rem; 
+  color: #666; 
+
+.error-message {
+  color: red;
+  margin: 10px 0; 
+}
+
+.add-room-button, .clear-filters-button {
+  margin-top: 10px; 
+  padding: 10px 15px;
+  background-color: #007BFF; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.add-room-button:disabled {
+  background-color: #ccc;
+}
 }
