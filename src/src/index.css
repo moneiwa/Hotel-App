@@ -1,0 +1,838 @@
+
+/* home */
+
+
+
+h1 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="button"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+.roomss {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.room-name-input, .guests-input, .price-input, .date-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-room-button {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-room-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+.error-message {
+  background-color: #ff9999;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.error-message button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+.b{
+  background-color: #241f1f;
+}
+.search-input{
+  margin-left: 250px;
+
+}
+
+.sear h2{
+margin-left: 650px;
+}
+
+
+.cart{
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+}
+.cart button{
+  margin-left: 100px;
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+  padding:10px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  margin-bottom: 20PX;
+}
+
+.sear button{
+  background-color: black;
+  color: white;
+  padding:10px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  
+}
+
+.container{
+  background-color: white;
+  width: 90%;
+  height: 1000px;
+  margin-top: 4%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+
+.conta{
+  margin-top: 5%
+  
+  ;
+  display:flex ;
+  gap:30%;
+}
+
+.date{
+  width: 900px;
+}
+
+
+
+.image{
+  background-image:url('./assets/pexels-pixabay-258154.jpg');
+  background-size:cover;
+  width:100%;
+  height: 300px;
+  margin-top: 0%;
+  margin-bottom: 10px;
+  
+
+}
+
+.imag{
+background-color: white;
+width:100%;
+height: 300px;
+border:0cm;
+border-color: black;
+
+}
+
+
+.container-row {
+  margin: 10px;
+  display: flex; 
+  width: 100%;
+  overflow: hidden;
+  gap: 10px;
+  
+}
+  /* overflow-y: scroll; */
+  /* overflow-x: scroll;  */
+  
+  /* white-space: nowrap; */
+  /* max-width: 100%;  */
+  /* scrollbar-width: thin; 
+  scrollbar-color: #b8b8b8 #f5f5f5; */
+
+
+.one{
+  background-image:url('./assets/pexels-donaldtong94-189296.jpg');
+  background-size:cover;
+  height: 400px;
+  width: 600px;
+  margin-top: 2%;
+}
+
+.two{
+  background-image:url('./assets/two.jpg');
+  background-size:cover;
+  height: 400px;
+  width: 600px;
+  margin-top: 2%;
+
+}
+
+.three{
+  background-image:url('./assets/three.jpg');
+  background-size:cover;
+  height: 400px;
+  width: 600px;
+  margin-top: 2%;
+  /* margin-left: auto; */
+  margin-right: 0;
+
+}
+
+.navbar {
+width: 100%;
+  position:absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+ 
+  background-color: rgb(15, 13, 13);
+  
+}
+.navbar ul{
+  margin-left: 900px;
+  display: flex;
+  gap: 10%;
+  
+}
+.navbar a{
+  color: rgb(248, 242, 242);
+}
+
+
+
+.map_container{
+display: flex;
+flex-direction: row;
+}
+
+
+
+.text{
+width: 1000px;
+height: 400px;
+margin-top: 10px;
+background-color:white;
+margin-left: 10px;
+margin-bottom: 2%;
+}
+
+.map_container button {
+padding: 10px;
+color: white;
+background-color: black;
+}
+.map{
+  background-image:url('./assets/map.PNG');
+  background-size:cover;
+  height: 400px;
+  width: 760px;
+  margin-top: 10px;
+  margin-bottom: 0%;
+
+}
+
+
+p2{
+  color: rgb(17, 76, 204);
+}
+
+buttn{
+  background-color:rgba(15, 81, 223, 0.212);
+  padding: 18px;
+  border-radius: 20px;
+}
+
+
+
+/* About */
+.v {
+  width: 80%;
+  height: auto;
+  background-color: white;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack items vertically */
+  margin-left: 150px;
+  margin-right: 100px;
+  height: 100%;
+}
+
+h1{
+  margin-left: 45%;
+
+  font-weight: 500px;
+}
+
+
+p4{
+
+  margin-left: 43%;
+}
+
+.box{
+margin-top: 0%;
+background-color:white;
+margin-left: 200px;
+width: 1200px;
+margin-right: 200px;
+height: 800px;
+
+
+}
+.head{
+margin-top: 120px;
+margin-left: 18%;
+display: flex;
+justify-content: center;
+
+}
+
+.coo{
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  margin-left: 42%;
+}
+.co{
+  background-color: rgb(143, 115, 115);
+  width: 100%;
+  
+  margin-top: 100px;
+  margin-left: 12%;
+ margin-right: 25%;
+  background-color: white;
+ 
+
+}
+
+.cont{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.on img
+{
+  margin-top: auto;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 2px;
+
+}
+
+.tw img
+{
+  margin-top: auto;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 0%;
+}
+
+.thre img
+{
+ 
+  margin-top: 2%;
+  width: 600px;
+  height: 400px;
+
+  margin-bottom: 5%;
+}
+
+.four img{
+
+ 
+  margin-top: 2%;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 5%;
+}
+
+
+
+/* Bookings */
+
+.form{
+  background-color:aqua;
+  margin-top: 80px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+ 
+}
+.formm{
+  margin-top: 20px;
+
+}
+.im{
+  display: flex;
+  
+}
+
+.button{
+  margin-top: 40px;
+  padding: 20px;
+  margin-left: 100px;
+}
+
+
+.bg-img{
+  background-image:url('./assets/pexels-pixabay-258154.jpg');
+  background-size:cover;
+}
+
+.wrapper{
+  margin-left: 700px;
+  margin-top: 100px;
+}
+
+.dine{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+.dinetwo h1{
+  margin-left: 40%;
+}
+
+.dinetwo p{
+
+  margin-left: 30%;
+}
+
+.dinetwo{
+  width: 100%;
+margin-top: 70px;
+
+background-color:white;
+
+
+
+}
+
+
+.dineone img{
+ 
+  height: 800px;
+  width: 100%;
+  margin-top: 2%;
+ 
+  
+
+
+}
+
+.near{
+  display: flex;
+  flex-direction: row;
+  margin-left: 25%;
+  gap:10px;
+  width: 100%;
+ 
+}
+
+.listone{
+  
+ 
+  height: 20px;
+  float: left;
+
+  
+}
+.listtwo{
+  
+
+  height: 20px;
+}
+.listthree{
+ 
+
+  height: 20px;
+}
+
+.listfour{
+ 
+ 
+  height: 20px;
+ 
+  margin-bottom: 50px;
+}
+
+
+
+.date {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #8d4d4d;
+  width: 200px;
+}
+
+.date .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.date .react-datepicker {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.date .react-datepicker__input-container {
+  width: 100%;
+}
+
+.date .react-datepicker__input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.date .react-datepicker__input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date .react-datepicker__day-names {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.date .react-datepicker__day {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.date .react-datepicker__day:hover {
+  background-color: #f9f9f9;
+}
+
+.date .react-datepicker__day--selected {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.date .react-datepicker__day--in-range {
+  background-color: #f2f2f2;
+}
+
+.date .react-datepicker__day--in-range:hover {
+  background-color: #f9f9f9;
+}
+
+
+.horizontal-scroll-container {
+  width: 100%;
+  overflow-x: auto; 
+  overflow-y: hidden; 
+  white-space: nowrap; 
+  padding: 10px 0; /* Optional: Add some padding */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.horizontal-scroll-wrapper {
+  display: inline-flex; /* Align images in a horizontal row */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.scroll-image {
+  width: 442px;
+  height: 200px; 
+  margin-right: 10px;
+  object-fit: cover;
+  flex-shrink: 0; 
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.login {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #241f1f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-left: 700px;
+}
+
+.login input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.login input[type="password"] {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+
+.login input[type="email"] {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+
+.login button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.roomss{
+  padding: 20px;
+  margin-top: 80px;
+  margin-left: 500px;
+  background-image:url('./assets/pexels-pixabay-258154.jpg');
+  background-size:cover;
+}
+
+
+.room-name-input{
+margin-right: 10px;
+}
+
+.guests-input{
+  margin-right: 10px;
+}
+
+
+.add-room-button{
+  padding: 2px;
+  color: #241f1f;
+  
+
+}
+
+.price-input{
+  margin-right: 10px;
+}
+
+.room-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center align cards */
+  margin-top: 20px; /* Margin above the cards */
+}
+
+.room-card {
+  background: #ffffff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  overflow: hidden; /* Prevents overflow of content */
+  max-width: 300px; /* Max width for cards */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation for hover effect */
+}
+
+.room-card:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.room-image {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.room-details {
+  padding: 16px; 
+}
+
+.room-details h3 {
+  margin: 0 0 8px; 
+  font-size: 1.5rem; 
+  color: #333; 
+}
+
+.room-details p {
+  margin: 4px 0; 
+  font-size: 1rem; 
+  color: #666; 
+
+.error-message {
+  color: red;
+  margin: 10px 0; 
+}
+
+.add-room-button, .clear-filters-button {
+  margin-top: 10px; 
+  padding: 10px 15px;
+  background-color: #007BFF; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.add-room-button:disabled {
+  background-color: #ccc;
+}
+}
+
+
+
+/* login */
+
+
+
+.imglog{
+  margin-top: 0;
+  background-image:url('./assets/pexels-wildlittlethingsphoto-2017802.jpg');
+  background-size: cover;
+  height: 900px;
+}
+
+.containerlogi {
+  max-width: 350px;
+  height: auto;
+  margin: 40px auto;
+  padding: 20px;
+background-color:rgba(0, 0, 0, 0.658); 
+margin-top: 80px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+h1 {
+  margin-top: 30px;
+  margin-left: auto;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"], input[type="password"] {
+  width: 330px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.b{
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size:14px;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+.signupp{
+  color: #f0f0f0;
+}
+
+.logout{
+  margin-left: 0px;
+  margin-top: 15px;
+  width: 10%;
+  height: 40px;
+  background-color: rgba(182, 137, 14, 0.5);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
