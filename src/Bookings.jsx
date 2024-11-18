@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRoomsAsync, addRoomAsync, clearError } from './roomSlice'; 
 import './index.css';
 import Paypal from './Paypal';
+import { Link } from 'react-router-dom';  
 
 function Bookings() {
     const [roomName, setRoomName] = useState('');
@@ -48,7 +49,7 @@ function Bookings() {
         setGuests('');
         setPrice('');
         setDate('');
-        setImage(null); // Reset image input
+        setImage(null); 
     };
 
     const isAvailable = roomName && guests && price && date && image;
@@ -134,13 +135,14 @@ function Bookings() {
             <div className="cart">
                 {cart.length > 0 ? (
                     cart.map((room) => (
-                            <div className="room-card" key={room.id}>
-                        <><img src={room.imageURL} alt={room.roomName} className="room-image" /><div className="cart-item" key={room.id}>
-                            <p>{room.roomName}</p>
-                            <p>Guests: {room.guests}</p>
-                            <p>Price: ${room.price}</p>
-                            <button onClick={() => removeFromCart(room.id)}>Remove</button>
-                        </div></>
+                        <div className="room-card" key={room.id}>
+                            <img src={room.imageURL} alt={room.roomName} className="room-image" />
+                            <div className="cart-item" key={room.id}>
+                                <p>{room.roomName}</p>
+                                <p>Guests: {room.guests}</p>
+                                <p>Price: ${room.price}</p>
+                                <button onClick={() => removeFromCart(room.id)}>Remove</button>
+                            </div>
                         </div>
                     ))
                 ) : (
@@ -149,6 +151,9 @@ function Bookings() {
 
                 {cart.length > 0 && <Paypal amount={totalAmount} />}
             </div>
+            <Link to="/">
+                <button>Logout</button>
+            </Link>
         </div>
     );
 }

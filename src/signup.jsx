@@ -3,8 +3,7 @@ import { useDispatch } from 'react-redux';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { setUser, setError } from './authSlice';
 import { auth } from './config/firebase';
-import { Link, useNavigate } from 'react-router-dom'; // Make sure to import Link
-
+import { Link, useNavigate } from 'react-router-dom'; 
 const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,15 +16,18 @@ const Signup = () => {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const { uid, email: userEmail } = userCredential.user; 
             dispatch(setUser({ uid, email: userEmail })); 
-            navigate('/'); // Redirect to home or another page on success
+            navigate('/login'); // Redirect 
         } catch (error) {
             dispatch(setError(error.message));
-            setErrorMessage(error.message); // Set the error message to display
+            setErrorMessage(error.message); 
         }
     };
 
     return (
-        <div className="container">
+        <div className='imglog'>
+
+        <br></br>
+        <div className="containerlogi">
             <h1>Sign Up</h1>
             <input
                 type="text"
@@ -39,9 +41,11 @@ const Signup = () => {
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
             />
-            <button onClick={() => signUp(email, password)}>Sign Up</button>
-            {errorMessage && <p className="error">{errorMessage}</p>} {/* Display error message */}
-            <Link to="/Login">Already have an account? Log In</Link>
+            <button className='b' onClick={() => signUp(email, password)}>Sign Up</button>
+            {errorMessage && <p className="error">{errorMessage}</p>} 
+           <br></br>
+            <Link to="/Login" className='signupp'>Already have an account? Log In</Link>
+        </div>
         </div>
     );
 };

@@ -1,4 +1,3 @@
-// src/components/Paypal.js
 import React, { useRef, useEffect, useState } from 'react';
 
 export default function Paypal({ amount }) {
@@ -36,7 +35,7 @@ export default function Paypal({ amount }) {
                 return Promise.reject(new Error("Amount is required"));
               }
 
-              const amountValue = Number(amount); // Ensure amount is a number
+              const amountValue = Number(amount); 
 
               return actions.order.create({
                 intent: "CAPTURE",
@@ -45,7 +44,7 @@ export default function Paypal({ amount }) {
                     description: "Cool looking item",
                     amount: {
                       currency_code: "USD",
-                      value: amountValue.toFixed(2), // Safely use toFixed
+                      value: amountValue.toFixed(2), 
                     },
                   },
                 ],

@@ -1,4 +1,373 @@
 
+/* home */
+
+
+/* General Styles */
+.home {
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; /* Ensure navbar is aligned to the left of the screen */
+  background-color: rgb(15, 13, 13);
+  padding: 10px 20px; /* Added padding for better spacing */
+  z-index: 10; /* To make sure it stays on top of other elements */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center; /* Centers the list items horizontally */
+  gap: 20px; /* Adjust the gap between the links */
+  margin: 0; /* Remove default margin */
+  list-style: none; /* Remove bullets from list */
+}
+
+.navbar li {
+  list-style: none; /* Ensures the list items have no default styling */
+}
+
+.navbar a {
+  color: rgb(248, 242, 242); /* Text color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.navbar a:hover {
+  color: #28a745; /* Change color on hover */
+}
+
+
+
+
+
+.map-container {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 5px; /* Optional: adds rounded corners to the map */
+}
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero-section {
+  background: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center/cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.start-tour-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Booking Form */
+.booking-form {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.booking-form select,
+.booking-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+/* Popular Packages Section */
+.popular-packages {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default to 1 column on small screens */
+  gap: 20px; /* Space between items */
+}
+
+.package {
+  background: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.package img {
+  width: 100%;          /* Make the image take full width */
+  height: 200px;        /* Set a fixed height */
+  object-fit: cover;    /* Crop the image to cover the container */
+  border-radius: 5px;   /* Optional: for rounded corners on images */
+}
+
+.package button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Large Screens (Tablets & Desktops) */
+@media (min-width: 768px) {
+  .package-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .package-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row for large screens */
+  }
+}
+
+
+
+
+
+
+.package.hawaii {
+  background-image: url('https://source.unsplash.com/1600x900/?hawaii');
+}
+
+.package.rome {
+  background-image: url('https://source.unsplash.com/1600x900/?rome');
+}
+
+.package.paris {
+  background-image: url('https://source.unsplash.com/1600x900/?paris');
+}
+
+.package.marina {
+  background-image: url('https://source.unsplash.com/1600x900/?marina');
+}
+
+.package.realtor {
+  background-image: url('https://source.unsplash.com/1600x900/?real-estate');
+}
+
+.package.sydney {
+  background-image: url('https://source.unsplash.com/1600x900/?sydney');
+}
+
+/* Offer Banner */
+.offer-banner {
+  background: url('https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center/cover;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.offer-banner button {
+  padding: 10px 20px;
+  background-color: #30201c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+/* Top Destinations Section */
+.top-destinations {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on medium to large screens */
+  gap: 20px;
+  justify-items: center;
+}
+
+.destination {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+}
+
+/* Images for the destinations */
+.destination-image {
+  width: 100%;
+  height: 180px; /* Smaller height */
+  object-fit: cover; /* Ensures the image doesn't stretch */
+  border-radius: 8px;
+}
+
+.destination h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.destination p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Large Screens (Tablets & Desktops) */
+@media (min-width: 768px) {
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row for large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .destination-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 items per row for extra large screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Legal Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.modal-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modal-buttons button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 h1 {
   margin-top: 0;
@@ -143,6 +512,9 @@ margin-left: 650px;
 
 
 .conta{
+  margin-top: 5%
+  
+  ;
   display:flex ;
   gap:30%;
 }
@@ -159,6 +531,7 @@ margin-left: 650px;
   width:100%;
   height: 300px;
   margin-top: 0%;
+  margin-bottom: 10px;
   
 
 }
@@ -180,8 +553,7 @@ border-color: black;
   overflow: hidden;
   gap: 10px;
   
- 
-
+}
   /* overflow-y: scroll; */
   /* overflow-x: scroll;  */
   
@@ -189,7 +561,7 @@ border-color: black;
   /* max-width: 100%;  */
   /* scrollbar-width: thin; 
   scrollbar-color: #b8b8b8 #f5f5f5; */
-}
+
 
 .one{
   background-image:url('./assets/pexels-donaldtong94-189296.jpg');
@@ -246,20 +618,28 @@ display: flex;
 flex-direction: row;
 }
 
+
+
 .text{
 width: 1000px;
 height: 400px;
-margin-top: 11%;
+margin-top: 10px;
 background-color:white;
-margin-left: 2;
+margin-left: 10px;
 margin-bottom: 2%;
+}
+
+.map_container button {
+padding: 10px;
+color: white;
+background-color: black;
 }
 .map{
   background-image:url('./assets/map.PNG');
   background-size:cover;
   height: 400px;
   width: 760px;
-  margin-top: 145px;
+  margin-top: 10px;
   margin-bottom: 0%;
 
 }
@@ -396,6 +776,10 @@ justify-content: center;
 .formm{
   margin-top: 20px;
 
+}
+.im{
+  display: flex;
+  
 }
 
 .button{
@@ -579,13 +963,13 @@ background-color:white;
 }
 
 .scroll-image {
-  height: 200px; /* Adjust as needed */
-  margin-right: 10px; /* Space between images */
+  width: 442px;
+  height: 200px; 
+  margin-right: 10px;
   object-fit: cover;
-  flex-shrink: 0; /* Prevent image shrinking */
+  flex-shrink: 0; 
 }
 
-/* Optional: Hide scrollbar for WebKit browsers (Chrome, Safari) */
 .horizontal-scroll-container::-webkit-scrollbar {
   display: none;
 }
@@ -724,4 +1108,97 @@ margin-right: 10px;
 .add-room-button:disabled {
   background-color: #ccc;
 }
+}
+
+
+
+/* login */
+
+
+
+.imglog{
+  margin-top: 0;
+  background-image:url('./assets/pexels-wildlittlethingsphoto-2017802.jpg');
+  background-size: cover;
+  height: 900px;
+}
+
+.containerlogi {
+  max-width: 350px;
+  height: auto;
+  margin: 40px auto;
+  padding: 20px;
+background-color:rgba(0, 0, 0, 0.658); 
+margin-top: 80px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+h1 {
+  margin-top: 30px;
+  margin-left: auto;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"], input[type="password"] {
+  width: 330px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.b{
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size:14px;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+.signupp{
+  color: #f0f0f0;
+}
+
+.logout{
+  margin-left: 0px;
+  margin-top: 15px;
+  width: 10%;
+  height: 40px;
+  background-color: rgba(182, 137, 14, 0.5);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
 }

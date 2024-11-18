@@ -8,17 +8,17 @@ const authSlice = createSlice({
     },
     reducers: {
         setUser(state, action) {
-            // Store only relevant fields
+            
             const { uid, email } = action.payload;
-            state.user = { uid, email }; // Adjust based on what you need
-            state.error = null; // Clear error on successful login
+            state.user = { uid, email }; 
+            state.error = null; 
         },
         setError(state, action) {
             state.error = action.payload;
         },
         logout(state) {
             state.user = null;
-            state.error = null; // Clear error on logout
+            state.error = null; 
         },
     },
 });

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { db, storage } from './config/firebase';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const roomSlice = createSlice({
@@ -26,7 +26,7 @@ const roomSlice = createSlice({
     },
 });
 
-// Fetch rooms from Firestore
+
 export const fetchRoomsAsync = () => async (dispatch) => {
     dispatch(setLoading(true));
     
@@ -42,20 +42,19 @@ export const fetchRoomsAsync = () => async (dispatch) => {
     }
 };
 
-
 export const addRoomAsync = (roomDetails) => async (dispatch) => {
     dispatch(setLoading(true));
     
     try {
         const { roomName, guests, price, date, image } = roomDetails;
 
-        // Upload image to Firebase Storage
+
         const storageRef = ref(storage, `images/${image.name}`);
         await uploadBytes(storageRef, image);
         const imageUrl = await getDownloadURL(storageRef);
 
-        // Save room details to Firestore
-        const roomRef = await addDoc(collection(db, 'rooms'), {
+       
+        await addDoc(collection(db, 'rooms'), {
             roomName,
             guests,
             price,
@@ -63,7 +62,54 @@ export const addRoomAsync = (roomDetails) => async (dispatch) => {
             imageURL: imageUrl,
         });
 
-        dispatch(fetchRoomsAsync()); // Refresh rooms list
+        dispatch(fetchRoomsAsync()); 
+    } catch (error) {
+        dispatch(setError(error.message));
+    } finally {
+        dispatch(setLoading(false));
+    }
+};
+
+export const editRoomAsync = (roomDetails) => async (dispatch) => {
+    dispatch(setLoading(true));
+    
+    try {
+        const { id, roomName, guests, price, date, image } = roomDetails;
+
+        let imageUrl = null;
+        if (image) {
+
+            const storageRef = ref(storage, `images/${image.name}`);
+            await uploadBytes(storageRef, image);
+            imageUrl = await getDownloadURL(storageRef);
+        }
+
+       
+        const roomRef = doc(db, 'rooms', id);
+        await updateDoc(roomRef, {
+            roomName,
+            guests,
+            price,
+            date,
+            ...(imageUrl && { imageURL: imageUrl }),
+        });
+
+        dispatch(fetchRoomsAsync()); 
+    } catch (error) {
+        dispatch(setError(error.message));
+    } finally {
+        dispatch(setLoading(false));
+    }
+};
+
+
+export const deleteRoomAsync = (id) => async (dispatch) => {
+    dispatch(setLoading(true));
+    
+    try {
+        const roomRef = doc(db, 'rooms', id);
+        await deleteDoc(roomRef);
+        dispatch(fetchRoomsAsync()); 
     } catch (error) {
         dispatch(setError(error.message));
     } finally {
