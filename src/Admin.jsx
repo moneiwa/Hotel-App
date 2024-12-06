@@ -140,7 +140,7 @@
 //                         <div key={room.id} className="room-item">
 //                             <h3>{room.roomName}</h3>
 //                             <p>Guests: {room.guests}</p>
-//                             <p>Price: ${room.price}</p>
+//                             <p>Price: R{room.price}</p>
 //                             <p>Date: {room.date}</p>
 //                             <button onClick={() => handleEditRoom(room)}>Edit</button>
 //                             <button onClick={() => handleDeleteRoom(room.id)}>Delete</button>

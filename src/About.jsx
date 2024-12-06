@@ -18,7 +18,12 @@ function About() {
 
                 <div className='coo'>
                 <p>{hotelInfo.address}</p>
+                
                 </div>
+                <h4>We welcome you to our luxurious landmark hotel where golden beaches and the warm Indian Ocean are just a shell’s throw away. You are assured of a relaxing and memorable stay in one of our 262 newly refurbished guestrooms, most of which have ocean views and outdoor balconies. Our function packages can be tailored to your budget.
+
+Well located on Durban’s Golden Mile, the hub of our city’s entertainment district, there is easy access to Durban’s sporting and corporate facilities. For fun lovers, there’s the Suncoast Casino and Entertainment Complex a short 250m walk away; for sports fans, the Kings Park Sporting precinct (including the Moses Mabhida, Kings Park Swimming Pool and Kings Park Rugby Stadium), Kingsmead Cricket stadium, Cyril Geoghegan Cycling Track, and Greyville Race Course are within walking distance or a short drive away; and for business executives the ICC, Durban Exhibition Centre and Olive Convention Centre are all within five minutes drive of the Blue Waters Hotel.
+</h4>
                 </div>
 
 
@@ -44,7 +49,7 @@ function About() {
           
 
             <div className='dinetwo'>
-                <h1>Come dine with us</h1>
+                <h3>Come dine with us</h3>
                 <p>Dine in style at the elegant Versailles Restaurant or kick back <br></br>at the Blue Dolphin Bar for cocktails and artisan pizza. In-room dining is available <br></br>15 hours a day.</p>
             </div>
             <div className='dineone'>

@@ -121,16 +121,17 @@ function Bookings() {
                                     <p>Guests: {room.guests}</p>
                                     <p>Price: ${room.price}</p>
                                     <p>Date: {room.date}</p>
-                                    <button onClick={() => selectRoom(room)}>Select Room</button>
+                                    <Paypal amount={totalAmount} />
+                                   
                                 </div>
                             </div>
                         ))
                     ) : (
-                        <p>No rooms found</p>
+                        <p>Not Available at this time</p>
                     )}
                 </div>
             )}
-
+{/* 
             <h2>Your Cart:</h2>
             <div className="cart">
                 {cart.length > 0 ? (
@@ -150,7 +151,7 @@ function Bookings() {
                 )}
 
                 {cart.length > 0 && <Paypal amount={totalAmount} />}
-            </div>
+            </div> */}
             <Link to="/">
                 <button>Logout</button>
             </Link>

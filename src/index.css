@@ -465,6 +465,7 @@ button[type="button"]:hover {
 }
 .search-input{
   margin-left: 250px;
+  margin-top: 100px;
 
 }
 
@@ -718,6 +719,10 @@ justify-content: center;
 
 }
 
+.co h4{
+  margin-left: 165px;
+}
+
 .cont{
   display: flex;
   flex-direction: row;
@@ -807,7 +812,7 @@ justify-content: center;
 
 
 
-.dinetwo h1{
+.dinetwo h3{
   margin-left: 40%;
 }
 

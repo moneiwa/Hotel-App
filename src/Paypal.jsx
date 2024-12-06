@@ -70,7 +70,7 @@ export default function Paypal({ amount }) {
 
     return () => {
       if (paypalRef.current) {
-        paypalRef.current.innerHTML = ''; // Cleanup PayPal buttons on unmount
+        paypalRef.current.innerHTML = ''; 
       }
     };
   }, [amount, showPayPal]);
@@ -79,7 +79,7 @@ export default function Paypal({ amount }) {
     <div>
       {!showPayPal ? (
         <button onClick={() => { setShowPayPal(true); console.log("PayPal button shown"); }}>
-          Show PayPal Button
+        Book
         </button>
       ) : (
         <div ref={paypalRef} style={{ marginTop: '20px' }}></div>
